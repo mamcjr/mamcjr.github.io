@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MAMCJ Games</title>
-<meta name="description" content="Estúdio independente de jogos. Mahjongverse, mahjong paciência em 14 universos, e Plumi's Journey, aventura de plataforma em 20 biomas.">
+<meta name="description" content="Estúdio independente de jogos. Mahjongverse, mahjong paciência em 14 universos, e A Jornada de Plumi, aventura de plataforma em 20 biomas.">
 <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/assets/brand/simbolo-512.png">
 <link rel="canonical" href="https://mamcjgames.com/">
 <meta property="og:title" content="MAMCJ Games">
-<meta property="og:description" content="Mahjongverse, mahjong paciência em 14 universos, e Plumi's Journey, aventura de plataforma em 20 biomas.">
+<meta property="og:description" content="Mahjongverse, mahjong paciência em 14 universos, e A Jornada de Plumi, aventura de plataforma em 20 biomas.">
 <meta property="og:image" content="https://mamcjgames.com/assets/img/1_menu.png">
 <meta property="og:url" content="https://mamcjgames.com/">
 <meta property="og:type" content="website">
@@ -114,7 +114,7 @@
   footer .dir { margin-left: auto; }
   @media (max-width: 640px) { footer .dir { margin-left: 0; } }
 
-  /* ------------------------------------------------- Plumi's Journey */
+  /* ------------------------------------------------- A Jornada de Plumi */
   .plumi { --cor-jogo: #f27aa8; }
   .plumi .olho { color: var(--cor-jogo); }
   .cabeca-jogo { display: flex; gap: 24px; align-items: center; margin-bottom: 26px; }
@@ -129,6 +129,18 @@
   .plumi .lista li:nth-child(4) span { background: #4fb8e8; }
   .plumi .video { margin-top: 34px; }
   .video video { position: absolute; inset: 0; width: 100%; height: 100%; background: #000; }
+
+/* Plumi — nova identidade, isolada das demais páginas do estúdio. */
+.plumi{background:radial-gradient(ellipse at 70% 0,#293d6150,transparent 65%),#111b2e}
+.plumi h2{font-family:Inter,system-ui,sans-serif;font-weight:800;letter-spacing:-.04em}
+.plumi .faixa-jogo{box-shadow:0 24px 60px #050b1844;border-radius:12px}
+.plumi .pj-stats{display:grid;grid-template-columns:repeat(4,1fr);padding:24px 0;border-bottom:1px solid var(--borda)}
+.plumi .stat{text-align:center;border-right:1px solid var(--borda)}.plumi .stat:last-child{border:0}
+.plumi .stat strong{display:block;font-size:2rem;color:#f8d78c}.plumi .stat span{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:var(--suave)}
+.plumi .pj-link{background:#f8d78c}.plumi .pj-soon{font-size:.85rem;color:var(--suave);margin-top:20px}
+@media(max-width:780px){.barra nav{gap:14px}.barra nav a[href="#mahjongverse"]{display:none}.barra nav a[href="#plumis-journey"]{font-size:.85rem}}
+@media(max-width:450px){.plumi .pj-stats{grid-template-columns:repeat(2,1fr);gap:18px}.plumi .stat:nth-child(2){border:0}.marca{gap:7px}.marca b{font-size:.95rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -141,7 +153,7 @@
     </a>
     <nav>
       <a href="#mahjongverse">Mahjongverse</a>
-      <a href="#plumis-journey">Plumi's Journey</a>
+      <a href="#plumis-journey">Plumi</a>
       <a href="#estudio" class="esconde">Estúdio</a>
       <a href="/mahjongverse-site/privacy/" class="esconde">Privacidade</a>
       <a href="/en/">EN</a>
@@ -156,8 +168,8 @@
       <h1>Jogos feitos<br>para durar a noite</h1>
       <p class="sub">A MAMCJ Games é um estúdio independente brasileiro. O primeiro jogo é o
         <span class="destaque">Mahjongverse</span>: mahjong paciência que atravessa 14 universos,
-        com mais de 1000 níveis e trilha sonora própria para cada mundo. E agora chega o
-        <a class="destaque" href="#plumis-journey">Plumi's Journey</a>, uma aventura de plataforma
+        com mais de 1000 níveis e trilha sonora própria para cada mundo. E agora chega
+        <a class="destaque" href="#plumis-journey">A Jornada de Plumi</a>, uma aventura de plataforma
         em pixel art com um cubo de gelatina que só sabe planar.</p>
       <div class="botoes">
         <a class="botao" href="https://play.google.com/store/apps/details?id=com.mamcjr.mahjongverse">
@@ -218,43 +230,13 @@
 <section id="plumis-journey" class="plumi">
   <div class="env">
     <p class="olho">Novo jogo</p>
-    <div class="cabeca-jogo">
-      <img class="icone-jogo" src="/assets/img/plumis/icone.png" alt="Ícone do Plumi's Journey">
-      <div>
-        <h2>Plumi's Journey</h2>
-        <p class="sub">Um cubo de gelatina, asas pequenas demais e um continente inteiro para atravessar.
-          Na Festa do Primeiro Voo, o Rei Obsidian partiu a Pluma Mãe em cem ecos dourados, e só o Plumi
-          pode trazê-la de volta.</p>
-      </div>
-    </div>
-    <img class="faixa-jogo" src="/assets/img/plumis/banner.png" alt="Plumi's Journey: o Plumi voando com as asas douradas" loading="lazy">
-
-    <ul class="lista">
-      <li><span></span><h3>20 biomas, 116 fases</h3><p>Colinas, recife submerso, vulcão, cidade das engrenagens, mar de nuvens, vale espelhado, o castelo flutuante e mais, cada um com uma mecânica nova.</p></li>
-      <li><span></span><h3>Pule, plane e voe</h3><p>Pulo duplo com as penas douradas, dash aéreo, mola de gelatina, grude na parede, pisão, rolamento, nado e, no fim, o voo de verdade.</p></li>
-      <li><span></span><h3>7 chefes</h3><p>General Granito, Rainha Esporinha, Duquesa Geada, Barão Magma, Mestre Catraca, o seu próprio reflexo e o Rei Obsidian.</p></li>
-      <li><span></span><h3>Segredos</h3><p>Nem tudo está à vista: o continente guarda surpresas para quem explora cada canto. Descubra por conta própria.</p></li>
-    </ul>
-
-    <div class="video">
-      <video controls preload="none" poster="/assets/img/plumis/trailer_capa.png" title="Plumi's Journey — trailer">
-        <source src="/assets/img/plumis/trailer_pt.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="tiras">
-      <img src="/assets/img/plumis/pt_1_colinas.png" alt="O Plumi nas Colinas da Vila" loading="lazy">
-      <img src="/assets/img/plumis/pt_3_recife.png" alt="Nadando no Recife Submerso" loading="lazy">
-      <img src="/assets/img/plumis/pt_2_vulcao.png" alt="Pulando a lava no vulcão" loading="lazy">
-      <img src="/assets/img/plumis/pt_4_engrenagens.png" alt="Rodas de engrenagem na Cidade das Engrenagens" loading="lazy">
-      <img src="/assets/img/plumis/pt_5_espelho.png" alt="Andando no teto no Vale Espelhado" loading="lazy">
-      <img src="/assets/img/plumis/pt_7_rei_obsidian.png" alt="A luta com o Rei Obsidian" loading="lazy">
-    </div>
-
-    <div class="botoes">
-      <span class="botao desativado"><span>Google Play<small>Em breve</small></span></span>
-      <a class="botao fantasma" href="/plumis-journey/privacy/">Política de privacidade</a>
-    </div>
+    <div class="cabeca-jogo"><img class="icone-jogo" src="/assets/img/plumis/icone.png" alt="" width="512" height="512" loading="lazy"><div><h2>A Jornada de Plumi</h2><p class="sub">Na Festa do Primeiro Voo, o Rei Obsidian partiu a Pluma Mãe em cem ecos. Agora, um pequeno cubo de gelatina precisa cruzar Cubória para reuni-los — com asas pequenas demais e coragem de sobra.</p></div></div>
+    <a href="/plumis-journey/" aria-label="Explore a aventura"><img class="faixa-jogo" src="/assets/img/plumis/banner_pt.png" alt="A Jornada de Plumi: Plumi, o cubo rosa com asas brancas, voa sobre a vila e as ilhas de Cubória." width="1024" height="500" loading="lazy"></a>
+    <div class="pj-stats"><div class="stat"><strong>20</strong><span>biomas</span></div><div class="stat"><strong>116</strong><span>fases</span></div><div class="stat"><strong>7</strong><span>chefes</span></div><div class="stat"><strong>6</strong><span>idiomas</span></div></div>
+    <div class="video"><video controls playsinline preload="none" poster="/assets/img/plumis/trailer_capa_pt.png" title="A Jornada de Plumi — trailer em português"><source src="/assets/img/plumis/trailer_pt.mp4" type="video/mp4"><track kind="captions" src="/assets/img/plumis/trailer_pt.vtt" srclang="pt-BR" label="Português"></video></div>
+    <div class="tiras"><img src="/assets/img/plumis/pt_1_colinas.png" alt="Plumi entre as casas e as árvores das Colinas da Vila." width="1920" height="1080" loading="lazy"><img src="/assets/img/plumis/pt_3_recife.png" alt="Plumi mergulha entre os corais e a vida marinha do Recife Submerso." width="1920" height="1080" loading="lazy"><img src="/assets/img/plumis/pt_2_vulcao.png" alt="Plumi diante dos rios de lava do Vulcão de Magma." width="1920" height="1080" loading="lazy"><img src="/assets/img/plumis/pt_4_engrenagens.png" alt="Plumi explora as máquinas da Cidade das Engrenagens." width="1920" height="1080" loading="lazy"></div>
+    <div class="botoes"><a class="botao pj-link" href="/plumis-journey/">Explore a aventura →</a><a class="botao fantasma" href="/plumis-journey/privacy/">Privacidade</a></div>
+    <p class="pj-soon">Em breve no Google Play</p>
   </div>
 </section>
 
@@ -274,7 +256,7 @@
   <div class="env">
     <span>© <span id="ano">2026</span> MAMCJ Games</span>
     <a href="/mahjongverse-site/privacy/">Privacidade do Mahjongverse</a>
-    <a href="/plumis-journey/privacy/">Privacidade do Plumi's Journey</a>
+    <a href="/plumis-journey/privacy/">Privacidade: A Jornada de Plumi</a>
     <a href="mailto:juniorpmcn@gmail.com">Contato</a>
     <span class="dir"><a href="/en/">English</a></span>
   </div>

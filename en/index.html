@@ -129,6 +129,18 @@
   .plumi .lista li:nth-child(4) span { background: #4fb8e8; }
   .plumi .video { margin-top: 34px; }
   .video video { position: absolute; inset: 0; width: 100%; height: 100%; background: #000; }
+
+/* Plumi — nova identidade, isolada das demais páginas do estúdio. */
+.plumi{background:radial-gradient(ellipse at 70% 0,#293d6150,transparent 65%),#111b2e}
+.plumi h2{font-family:Inter,system-ui,sans-serif;font-weight:800;letter-spacing:-.04em}
+.plumi .faixa-jogo{box-shadow:0 24px 60px #050b1844;border-radius:12px}
+.plumi .pj-stats{display:grid;grid-template-columns:repeat(4,1fr);padding:24px 0;border-bottom:1px solid var(--borda)}
+.plumi .stat{text-align:center;border-right:1px solid var(--borda)}.plumi .stat:last-child{border:0}
+.plumi .stat strong{display:block;font-size:2rem;color:#f8d78c}.plumi .stat span{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:var(--suave)}
+.plumi .pj-link{background:#f8d78c}.plumi .pj-soon{font-size:.85rem;color:var(--suave);margin-top:20px}
+@media(max-width:780px){.barra nav{gap:14px}.barra nav a[href="#mahjongverse"]{display:none}.barra nav a[href="#plumis-journey"]{font-size:.85rem}}
+@media(max-width:450px){.plumi .pj-stats{grid-template-columns:repeat(2,1fr);gap:18px}.plumi .stat:nth-child(2){border:0}.marca{gap:7px}.marca b{font-size:.95rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -217,43 +229,13 @@
 <section id="plumis-journey" class="plumi">
   <div class="env">
     <p class="olho">New game</p>
-    <div class="cabeca-jogo">
-      <img class="icone-jogo" src="/assets/img/plumis/icone.png" alt="Plumi's Journey icon">
-      <div>
-        <h2>Plumi's Journey</h2>
-        <p class="sub">A jelly cube, wings that are far too small and a whole continent to cross.
-          At the First Flight Festival, King Obsidian shattered the Mother Plume into a hundred golden echoes,
-          and only Plumi can bring it back.</p>
-      </div>
-    </div>
-    <img class="faixa-jogo" src="/assets/img/plumis/banner.png" alt="Plumi's Journey: Plumi flying with golden wings" loading="lazy">
-
-    <ul class="lista">
-      <li><span></span><h3>20 biomes, 116 levels</h3><p>Hills, a sunken reef, a volcano, a gear city, a sea of clouds, a mirror valley, the floating castle and more, each with a new mechanic.</p></li>
-      <li><span></span><h3>Jump, glide and fly</h3><p>Double jump with golden feathers, air dash, jelly spring, wall cling, heavy stomp, roll, swimming and, at the very end, real flight.</p></li>
-      <li><span></span><h3>7 bosses</h3><p>General Granite, Queen Sporelle, Duchess Frost, Baron Magma, Master Ratchet, your own shadow and King Obsidian.</p></li>
-      <li><span></span><h3>Secrets</h3><p>Not everything is in plain sight: the continent keeps surprises for those who explore every corner. Find them yourself.</p></li>
-    </ul>
-
-    <div class="video">
-      <video controls preload="none" poster="/assets/img/plumis/trailer_capa.png" title="Plumi's Journey — trailer">
-        <source src="/assets/img/plumis/trailer_en.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="tiras">
-      <img src="/assets/img/plumis/en_1_colinas.png" alt="Plumi in the Village Hills" loading="lazy">
-      <img src="/assets/img/plumis/en_3_recife.png" alt="Swimming in the Sunken Reef" loading="lazy">
-      <img src="/assets/img/plumis/en_2_vulcao.png" alt="Jumping over lava in the volcano" loading="lazy">
-      <img src="/assets/img/plumis/en_4_engrenagens.png" alt="Gear wheels in Gear City" loading="lazy">
-      <img src="/assets/img/plumis/en_5_espelho.png" alt="Walking on the ceiling in the Mirror Valley" loading="lazy">
-      <img src="/assets/img/plumis/en_7_rei_obsidian.png" alt="The fight with King Obsidian" loading="lazy">
-    </div>
-
-    <div class="botoes">
-      <span class="botao desativado"><span>Google Play<small>Coming soon</small></span></span>
-      <a class="botao fantasma" href="/plumis-journey/privacy/">Privacy policy</a>
-    </div>
+    <div class="cabeca-jogo"><img class="icone-jogo" src="/assets/img/plumis/icone.png" alt="" width="512" height="512" loading="lazy"><div><h2>Plumi’s Journey</h2><p class="sub">At the First Flight Festival, King Obsidian shattered the Mother Plume into a hundred echoes. Now a little jelly cube must cross Cubória to bring them together — with tiny wings and plenty of courage.</p></div></div>
+    <a href="/en/plumis-journey/" aria-label="Explore the adventure"><img class="faixa-jogo" src="/assets/img/plumis/banner_en.png" alt="Plumi’s Journey: Plumi, a pink jelly cube with white wings, flies over Cubória’s village and islands." width="1024" height="500" loading="lazy"></a>
+    <div class="pj-stats"><div class="stat"><strong>20</strong><span>biomes</span></div><div class="stat"><strong>116</strong><span>levels</span></div><div class="stat"><strong>7</strong><span>bosses</span></div><div class="stat"><strong>6</strong><span>languages</span></div></div>
+    <div class="video"><video controls playsinline preload="none" poster="/assets/img/plumis/trailer_capa_en.png" title="Plumi’s Journey — English trailer"><source src="/assets/img/plumis/trailer_en.mp4" type="video/mp4"><track kind="captions" src="/assets/img/plumis/trailer_en.vtt" srclang="en" label="English"></video></div>
+    <div class="tiras"><img src="/assets/img/plumis/en_1_colinas.png" alt="Plumi among the houses and trees of the Village Hills." width="1920" height="1080" loading="lazy"><img src="/assets/img/plumis/en_3_recife.png" alt="Plumi dives among corals and sea life in the Sunken Reef." width="1920" height="1080" loading="lazy"><img src="/assets/img/plumis/en_2_vulcao.png" alt="Plumi beside the rivers of lava in Magma Volcano." width="1920" height="1080" loading="lazy"><img src="/assets/img/plumis/en_4_engrenagens.png" alt="Plumi explores the machines of Gear City." width="1920" height="1080" loading="lazy"></div>
+    <div class="botoes"><a class="botao pj-link" href="/en/plumis-journey/">Explore the adventure →</a><a class="botao fantasma" href="/plumis-journey/privacy/">Privacy</a></div>
+    <p class="pj-soon">Coming soon to Google Play</p>
   </div>
 </section>
 
