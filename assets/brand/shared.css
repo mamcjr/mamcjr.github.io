@@ -1,0 +1,10 @@
+/* Assinatura do estúdio nas páginas dos jogos, sem alterar suas identidades. */
+.studio.studio-v2, .brand.studio-v2 { display: inline-flex; flex: none; text-decoration: none; }
+.studio.studio-v2 img, .brand.studio-v2 img { width: 174px; height: auto; }
+.foot nav { flex-wrap: wrap; }
+@media (max-width: 600px) {
+  .studio.studio-v2 img, .brand.studio-v2 img { width: 134px; height: auto; }
+}
+@media (max-width: 370px) {
+  .studio.studio-v2 img, .brand.studio-v2 img { width: 112px; }
+}

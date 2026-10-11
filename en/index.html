@@ -5,184 +5,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MAMCJ Games</title>
 <meta name="description" content="Independent game studio. Mahjongverse, mahjong solitaire across 14 universes, and Plumi's Journey, a platform adventure across 20 biomes.">
-<link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="/assets/brand/simbolo-512.png">
+<link rel="icon" href="/assets/brand/v2/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/brand/v2/apple-touch-icon.png">
 <link rel="canonical" href="https://mamcjgames.com/en/">
 <meta property="og:title" content="MAMCJ Games">
 <meta property="og:description" content="Mahjongverse, mahjong solitaire across 14 universes, and Plumi's Journey, a platform adventure across 20 biomes.">
-<meta property="og:image" content="https://mamcjgames.com/assets/mahjongverse/en/social.png">
+<meta property="og:image" content="https://mamcjgames.com/assets/brand/v2/social-en.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://mamcjgames.com/en/">
 <meta property="og:type" content="website">
+<link rel="alternate" hreflang="pt-BR" href="https://mamcjgames.com/"><link rel="alternate" hreflang="en" href="https://mamcjgames.com/en/"><link rel="alternate" hreflang="x-default" href="https://mamcjgames.com/">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --tinta: #0e1524;
-    --tinta-2: #151f33;
-    --papel: #f5f1e6;
-    --ambar: #e8b043;
-    --magenta: #e0508c;
-    --jade: #2fd6a8;
-    --texto: #dfe4ef;
-    --suave: #9aa6bd;
-    --borda: rgba(245, 241, 230, .12);
-    --largura: 1080px;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--tinta);
-    color: var(--texto);
-    font: 17px/1.65 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  h1, h2, h3 { font-family: Cinzel, Georgia, serif; line-height: 1.15; margin: 0 0 .4em; }
-  h1 { font-size: clamp(2.1rem, 6vw, 3.4rem); color: var(--papel); }
-  h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); color: var(--papel); }
-  p { margin: 0 0 1em; }
-  a { color: var(--ambar); }
-  img { max-width: 100%; height: auto; display: block; }
-  .env { width: 100%; max-width: var(--largura); margin: 0 auto; padding: 0 20px; }
-
-  /* ------------------------------------------------------------ topo */
-  header {
-    position: sticky; top: 0; z-index: 10;
-    background: rgba(14, 21, 36, .88);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--borda);
-  }
-  .barra { display: flex; align-items: center; gap: 14px; height: 68px; }
-  .marca { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--papel); }
-  .marca img { width: 38px; height: 38px; }
-  .marca b { font-family: Cinzel, serif; font-size: 1.12rem; letter-spacing: .02em; display: block; }
-  .marca i { color: var(--ambar); font-size: .68rem; font-weight: 700; letter-spacing: .3em; font-style: normal; }
-  .barra nav { margin-left: auto; display: flex; gap: 22px; align-items: center; }
-  .barra nav a { color: var(--suave); text-decoration: none; font-size: .95rem; }
-  .barra nav a:hover { color: var(--papel); }
-  @media (max-width: 640px) { .barra nav a.esconde { display: none; } }
-
-  /* ----------------------------------------------------------- herói */
-  .heroi { position: relative; overflow: hidden; padding: 78px 0 64px; }
-  .heroi::before {
-    content: ""; position: absolute; inset: -30% -10% auto; height: 620px;
-    background: radial-gradient(60% 60% at 50% 0, rgba(88, 46, 124, .75), transparent 70%);
-    pointer-events: none;
-  }
-  .heroi .env { position: relative; display: grid; gap: 40px; grid-template-columns: 1.05fr .95fr; align-items: center; }
-  @media (max-width: 860px) { .heroi .env { grid-template-columns: 1fr; } }
-  .selo { width: 104px; margin-bottom: 22px; }
-  .sub { color: var(--suave); font-size: 1.1rem; max-width: 48ch; }
-  .destaque { color: var(--papel); }
-  .retrato { justify-self: center; max-width: 300px; border-radius: 22px; border: 1px solid var(--borda); box-shadow: 0 30px 70px rgba(0, 0, 0, .55); }
-
-  /* ---------------------------------------------------------- botões */
-  .botoes { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
-  .botao {
-    display: inline-flex; align-items: center; gap: 10px;
-    padding: 13px 22px; border-radius: 14px; font-weight: 700; text-decoration: none;
-    background: var(--ambar); color: #14110c; border: 1px solid transparent;
-  }
-  .botao:hover { filter: brightness(1.07); }
-  .botao.fantasma { background: transparent; color: var(--texto); border-color: var(--borda); }
-  .botao.desativado { opacity: .45; pointer-events: none; }
-  .botao small { display: block; font-size: .7rem; font-weight: 600; opacity: .82; }
-
-  /* ---------------------------------------------------------- seções */
-  section { padding: 72px 0; border-top: 1px solid var(--borda); }
-  .olho { color: var(--ambar); font-size: .76rem; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; margin-bottom: 10px; }
-  .video { position: relative; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; border: 1px solid var(--borda); background: var(--tinta-2); }
-  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-
-  .tiras { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 28px; }
-  .tiras img { border-radius: 14px; border: 1px solid var(--borda); }
-
-  .lista { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 30px; list-style: none; padding: 0; }
-  .lista li { background: var(--tinta-2); border: 1px solid var(--borda); border-radius: 16px; padding: 22px; }
-  .lista h3 { font-size: 1.02rem; color: var(--papel); }
-  .lista p { color: var(--suave); margin: 0; font-size: .95rem; }
-  .lista span { display: block; width: 34px; height: 4px; border-radius: 2px; margin-bottom: 14px; background: var(--ambar); }
-  .lista li:nth-child(2) span { background: var(--magenta); }
-  .lista li:nth-child(3) span { background: var(--jade); }
-  .lista li:nth-child(4) span { background: #5a96ff; }
-
-  footer { padding: 46px 0 60px; border-top: 1px solid var(--borda); color: var(--suave); font-size: .92rem; }
-  footer a { color: var(--suave); }
-  footer .env { display: flex; flex-wrap: wrap; gap: 18px 28px; align-items: center; }
-  footer .dir { margin-left: auto; }
-  @media (max-width: 640px) { footer .dir { margin-left: 0; } }
-
-  /* ------------------------------------------------- Plumi's Journey */
-  .plumi { --cor-jogo: #f27aa8; }
-  .plumi .olho { color: var(--cor-jogo); }
-  .cabeca-jogo { display: flex; gap: 24px; align-items: center; margin-bottom: 26px; }
-  @media (max-width: 640px) { .cabeca-jogo { flex-direction: column; align-items: flex-start; } }
-  .icone-jogo { width: 112px; height: 112px; border-radius: 26px; border: 1px solid var(--borda);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, .45); flex: none; }
-  .faixa-jogo { width: 100%; border-radius: 18px; border: 1px solid var(--borda); margin: 6px 0 4px; }
-  .plumi img { image-rendering: pixelated; }
-  .plumi .lista span { background: var(--cor-jogo); }
-  .plumi .lista li:nth-child(2) span { background: #ffd84a; }
-  .plumi .lista li:nth-child(3) span { background: #a884f0; }
-  .plumi .lista li:nth-child(4) span { background: #4fb8e8; }
-  .plumi .video { margin-top: 34px; }
-  .video video { position: absolute; inset: 0; width: 100%; height: 100%; background: #000; }
-
-/* Plumi — nova identidade, isolada das demais páginas do estúdio. */
-.plumi{background:radial-gradient(ellipse at 70% 0,#293d6150,transparent 65%),#111b2e}
-.plumi h2{font-family:Inter,system-ui,sans-serif;font-weight:800;letter-spacing:-.04em}
-.plumi .faixa-jogo{box-shadow:0 24px 60px #050b1844;border-radius:12px}
-.plumi .pj-stats{display:grid;grid-template-columns:repeat(4,1fr);padding:24px 0;border-bottom:1px solid var(--borda)}
-.plumi .stat{text-align:center;border-right:1px solid var(--borda)}.plumi .stat:last-child{border:0}
-.plumi .stat strong{display:block;font-size:2rem;color:#f8d78c}.plumi .stat span{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:var(--suave)}
-.plumi .pj-link{background:#f8d78c}.plumi .pj-teste{background:#ff91bd;color:#1b2440}.plumi .pj-soon{font-size:.85rem;color:var(--suave);margin-top:20px}
-@media(max-width:780px){.barra nav{gap:14px}.barra nav a[href="#mahjongverse"]{display:none}.barra nav a[href="#plumis-journey"]{font-size:.85rem}}
-@media(max-width:450px){.plumi .pj-stats{grid-template-columns:repeat(2,1fr);gap:18px}.plumi .stat:nth-child(2){border:0}.marca{gap:7px}.marca b{font-size:.95rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+<link rel="stylesheet" href="/assets/brand/studio.css?v=20261011">
 </head>
 <body>
 
-<header>
-  <div class="env barra">
-    <a class="marca" href="/">
-      <img src="/assets/brand/simbolo.svg" alt="">
-      <span><b>MAMCJ</b><i>GAMES</i></span>
-    </a>
-    <nav>
-      <a href="#mahjongverse">Mahjongverse</a>
-      <a href="#plumis-journey">Plumi's Journey</a>
-      <a href="#studio" class="esconde">Studio</a>
-      <a href="/mahjongverse-site/privacy/" class="esconde">Privacy</a>
-      <a href="/">PT</a>
-    </nav>
-  </div>
-</header>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="env barra">
+  <a class="marca" href="/en/"><img src="/assets/brand/v2/logo-dark.svg" alt="MAMCJ Games" width="194" height="49"></a>
+  <nav aria-label="Main navigation">
+    <a href="#jogos">Games</a>
+    <a class="esconde" href="#studio">Studio</a>
+    <a class="esconde" href="#contato">Contact</a>
+    <a class="language" href="/" lang="pt-BR" hreflang="pt-BR" aria-label="Português">PT</a>
+  </nav>
+</div></header>
 
-<div class="heroi">
-  <div class="env">
-    <div>
-      <img class="selo" src="/assets/brand/simbolo.svg" alt="MAMCJ Games">
-      <h1>Games made<br>to last the night</h1>
-      <p class="sub">MAMCJ Games is an independent studio from Brazil. The first game is
-        <span class="destaque">Mahjongverse</span>: mahjong solitaire that travels through 14 universes,
-        with 1000+ levels and an original soundtrack for every world. And now comes
-        <a class="destaque" href="#plumis-journey">Plumi's Journey</a>, a pixel art platform adventure
-        starring a jelly cube who can only glide.</p>
-      <div class="botoes">
-        <a class="botao" href="https://play.google.com/store/apps/details?id=com.mamcjr.mahjongverse">
-          <span>Play on Android<small>Free on Google Play</small></span>
-        </a>
-        <a class="botao fantasma" href="#trailer">Watch the trailer</a>
+<main id="main">
+<div class="heroi"><div class="env">
+  <div class="hero-intro"><div>
+    <p class="olho">Independent games · Made in Brazil</p>
+    <h1>Small studio.<br><span>Big worlds.</span></h1>
+  </div><p class="sub">Independent games made in Brazil, built for your pocket and your time. Choose your next world.</p></div>
+  <div class="game-grid" id="jogos">
+    <article class="game-card">
+      <a class="game-art" href="/en/mahjongverse/" aria-label="Explore Mahjongverse"><img src="/assets/mahjongverse/en/feature.png" alt="Mahjongverse: mahjong tiles and portals to fourteen worlds." width="1024" height="500" fetchpriority="high"></a>
+      <div class="game-copy"><div class="game-title"><h2>Mahjongverse</h2><span class="status">On Android</span></div>
+        <p>One board. Fourteen worlds. Mahjong solitaire at your own pace.</p>
+        <div class="botoes"><a class="botao mint" href="https://play.google.com/store/apps/details?id=com.mamcjr.mahjongverse">Play on Android <span aria-hidden="true">↗</span></a><a class="botao fantasma" href="/en/mahjongverse/">Explore the game</a></div>
       </div>
-    </div>
-    <img class="retrato" src="/assets/mahjongverse/en/portrait.webp" alt="Mahjongverse in portrait mode" loading="lazy">
+    </article>
+    <article class="game-card plumi-card">
+      <a class="game-art" href="/en/plumis-journey/" aria-label="Explore Plumi’s Journey"><img src="/assets/img/plumis/banner_en.png" alt="Plumi, a pink jelly cube with white wings, flies over Cubória." width="1024" height="500"></a>
+      <div class="game-copy"><div class="game-title"><h2>Plumi’s Journey</h2><span class="status">In testing</span></div>
+        <p>Little wings. A big adventure. Discover Cubória in pixel art.</p>
+        <div class="botoes"><a class="botao pink" href="https://groups.google.com/g/plumi-testers" target="_blank" rel="noopener">Join the tests <span aria-hidden="true">↗</span></a><a class="botao fantasma" href="/en/plumis-journey/">Explore the game</a></div>
+      </div>
+    </article>
   </div>
-</div>
-
-<section id="mahjongverse"><div class="env"><p class="olho">Mahjongverse</p><h2>One board. Fourteen worlds.</h2><a href="/en/mahjongverse/"><img class="faixa-jogo" src="/assets/mahjongverse/en/feature.png" alt="Mahjong solitaire across the multiverse" width="1024" height="500" loading="lazy"></a><p class="sub">Match free tiles, clear layered boards and follow the portals. Every ten levels, the journey changes its scenery, symbols and soundtrack.</p><ul class="lista"><li><span></span><h3>14 universes</h3><p>From a jade garden to the Sands of the Nile, from Neo-Tokyo to Astral Cosmos. Every world has its own art, tiles and music.</p></li><li><span></span><h3>182 fusions</h3><p>Clear level 140 to witness the fracture. Then one world brings the scenery and another brings the tile symbols.</p></li><li><span></span><h3>1000+ levels</h3><p>Every board starts with a solution. The challenge grows as you progress, with a boss every ten levels.</p></li><li><span></span><h3>At your own pace</h3><p>Hint, undo and shuffle when you need them. Portrait or landscape, six languages and a Reduce motion setting.</p></li></ul><div class="botoes"><a class="botao" href="/en/mahjongverse/">Explore the worlds →</a></div></div></section>
+  <div class="hero-foot"><span>Made by one person. Played in your own time.</span><a href="#studio">Meet the studio <span aria-hidden="true">↓</span></a></div>
+</div></div>
+<section id="mahjongverse" class="game-section"><div class="env"><p class="olho">Mahjongverse</p><h2>One board. Fourteen worlds.</h2><a href="/en/mahjongverse/"><img class="faixa-jogo" src="/assets/mahjongverse/en/feature.png" alt="Mahjong solitaire across the multiverse" width="1024" height="500" loading="lazy"></a><p class="sub">Match free tiles, clear layered boards and follow the portals. Every ten levels, the journey changes its scenery, symbols and soundtrack.</p><ul class="lista"><li><span></span><h3>14 universes</h3><p>From a jade garden to the Sands of the Nile, from Neo-Tokyo to Astral Cosmos. Every world has its own art, tiles and music.</p></li><li><span></span><h3>182 fusions</h3><p>Clear level 140 to witness the fracture. Then one world brings the scenery and another brings the tile symbols.</p></li><li><span></span><h3>1000+ levels</h3><p>Every board starts with a solution. The challenge grows as you progress, with a boss every ten levels.</p></li><li><span></span><h3>At your own pace</h3><p>Hint, undo and shuffle when you need them. Portrait or landscape, six languages and a Reduce motion setting.</p></li></ul><div class="botoes"><a class="botao" href="/en/mahjongverse/">Explore the worlds →</a></div></div></section>
 
 <section id="trailer"><div class="env"><p class="olho">Trailer</p><h2>A journey through the multiverse</h2><p class="trailer-languages"><a href="/mahjongverse/#trailer">Trailer em português</a> · <a href="/en/mahjongverse/#trailer">English trailer</a></p><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/ijDJ84hoWbM?hl=en&amp;rel=0&amp;playsinline=1" title="Mahjongverse — Trailer — English" width="1280" height="720" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p><a href="https://youtu.be/ijDJ84hoWbM" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p><div class="tiras"><img src="/assets/mahjongverse/en/01_jade.webp" alt="A layered mahjong board in the illustrated Jade Dynasty garden." width="1280" height="720" loading="lazy"><img src="/assets/mahjongverse/en/02_nile.webp" alt="Sandstone mahjong tiles with Egyptian symbols beneath a pyramid landscape." width="1280" height="720" loading="lazy"><img src="/assets/mahjongverse/en/03_neon.webp" alt="A mahjong board with neon symbols in the Neo-Tokyo universe." width="1280" height="720" loading="lazy"><img src="/assets/mahjongverse/en/04_map.webp" alt="The universe map with ten island levels and a boss portal." width="1280" height="720" loading="lazy"><img src="/assets/mahjongverse/en/05_cosmos.webp" alt="An Astral Cosmos mahjong board with planets and a violet starfield." width="1280" height="720" loading="lazy"><img src="/assets/mahjongverse/en/06_fusion.webp" alt="The first world fusion combines Alchemy Lab scenery and 8-Bit World tiles." width="1280" height="720" loading="lazy"><img src="/assets/mahjongverse/en/07_fracture.webp" alt="Fourteen universe emblems orbit a cosmic rift during the fracture cinematic." width="1280" height="720" loading="lazy"><img src="/assets/mahjongverse/en/08_boss.webp" alt="The victory screen after clearing a boss, showing stars and the next universe." width="1280" height="720" loading="lazy"></div><div class="botoes"><a class="botao" href="https://play.google.com/store/apps/details?id=com.mamcjr.mahjongverse">Google Play</a></div></div></section>
 
@@ -199,19 +71,16 @@
   </div>
 </section>
 
-<section id="studio">
-  <div class="env">
-    <p class="olho">Studio</p>
-    <h2>Who makes it</h2>
-    <p class="sub">MAMCJ Games is run by one person, in Brazil, with the Godot engine.
-      The games are built for a pocket and a short break: they start fast, save on their own
-      and never ask you to create an account.</p>
-    <p class="sub">Found a problem or want to suggest something? Write to
-      <a href="mailto:marcosamcjr@gmail.com">marcosamcjr@gmail.com</a>.</p>
-    <p class="sub">News and behind the scenes on <a href="https://www.instagram.com/mamcjgames/" target="_blank" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@mamcjgames" target="_blank" rel="noopener">YouTube</a>: @mamcjgames.</p>
+<section id="studio" class="studio-section"><div class="env studio-grid">
+  <div><p class="olho">The studio</p><h2>Made in Brazil.<br>With imagination.</h2><img class="studio-mark" src="/assets/brand/v2/symbol.svg" alt="" width="78" height="78" loading="lazy"></div>
+  <div><p class="sub">MAMCJ Games is an independent studio run by one person in Brazil, with the Godot engine. Each game is a new chance to build a world worth discovering.</p>
+    <p class="sub">Built for your pocket and a short break: the games start fast, save on their own and never ask you to create an account.</p>
+    <div class="contact-block" id="contato"><h3 style="color:inherit">Let’s talk?</h3><p>Found a problem or have an idea? Write to <a href="mailto:marcosamcjr@gmail.com">marcosamcjr@gmail.com</a>.</p>
+    <div class="social-links"><a href="https://www.instagram.com/mamcjgames/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.youtube.com/@mamcjgames" target="_blank" rel="noopener">YouTube ↗</a></div></div>
   </div>
-</section>
+</div></section>
 
+</main>
 <footer>
   <div class="env">
     <span>© <span id="ano">2026</span> MAMCJ Games</span>
