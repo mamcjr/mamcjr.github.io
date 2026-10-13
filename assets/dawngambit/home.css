@@ -1,0 +1,6 @@
+/* Extensão isolada: mantém a identidade e os estilos dos outros jogos. */
+.dawn-card .game-title { flex-direction: column; align-items: flex-start; }
+.dawn-card .status { color: #f4ba52; border-color: #f4ba5250; white-space: normal; }
+.dawn-section { background: #122522; }
+.dawn-section .lista li { border-color: #f4ba52; }
+@media (min-width: 1080px) { .game-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
