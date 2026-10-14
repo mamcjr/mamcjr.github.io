@@ -16,9 +16,11 @@
 .dg-story { display: grid; grid-template-columns: 1.2fr .8fr; gap: 72px; align-items: center; }
 .dg-story p + p { margin-top: 18px; }
 .dg-story .sub { max-width: 58ch; }
+.dg-story > figure { --shot-height: 650px; width: min(100%, calc(var(--shot-height) * 9 / 16)); justify-self: center; }
 .dg-story img { max-height: 650px; width: auto; margin-inline: auto; border-radius: 16px; border: 1px solid var(--borda); }
 .dg figure { margin: 0; }
 .dg figcaption { font-size: .78rem; color: var(--suave); margin-top: 12px; }
+.dg-story figcaption { text-align: center; }
 .dg .lista { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .dg .lista li { border-color: var(--ambar); }
 .dg-biomes { color: var(--suave); margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--borda); }
@@ -54,6 +56,7 @@
   .dg-hero { padding-top: 28px; }
   .dg-intro { padding-top: 26px; }
   .dg-story { grid-template-columns: 1fr; }
+  .dg-story > figure { --shot-height: 560px; }
   .dg-story img { max-height: 560px; }
   .dg-stats { grid-template-columns: repeat(2, 1fr); }
   .dg .lista { grid-template-columns: 1fr; }
